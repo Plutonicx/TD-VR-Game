@@ -5,18 +5,18 @@ namespace CompleteProject
 {
     public class EnemyMovement : MonoBehaviour
     {
-        Transform player;               // Reference to the player's position.
-        PlayerHealth playerHealth;      // Reference to the player's health.
-        EnemyHealth enemyHealth;        // Reference to this enemy's health.
+        //Transform player;               // Reference to the player's position.
+        //PlayerHealth playerHealth;      // Reference to the player's health.
+        //EnemyHealth enemyHealth;        // Reference to this enemy's health.
         UnityEngine.AI.NavMeshAgent nav;               // Reference to the nav mesh agent.
 
 
         void Awake ()
         {
             // Set up the references.
-            player = GameObject.FindGameObjectWithTag ("Player").transform;
-            playerHealth = player.GetComponent <PlayerHealth> ();
-            enemyHealth = GetComponent <EnemyHealth> ();
+            //player = GameObject.FindGameObjectWithTag ("Player").transform;
+            //playerHealth = player.GetComponent <PlayerHealth> ();
+            //enemyHealth = GetComponent <EnemyHealth> ();
             nav = GetComponent <UnityEngine.AI.NavMeshAgent> ();
         }
 
@@ -24,10 +24,10 @@ namespace CompleteProject
         void Update ()
         {
             // If the enemy and the player have health left...
-            if(enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
+            if( 1 == 1 /*enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0*/ )
             {
                 // ... set the destination of the nav mesh agent to the player.
-                nav.SetDestination (player.position);
+                nav.SetDestination (new Vector3(36.3f,0f,44f));
             }
             // Otherwise...
             else
