@@ -173,7 +173,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: f92768f0c97015849acbe907359b2bb5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.879
+      value: 0.824
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: f92768f0c97015849acbe907359b2bb5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -465,11 +465,11 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1125528651}
   serializedVersion: 5
-  lengthInSec: 0.2
+  lengthInSec: 0.3
   speed: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   autoRandomSeed: 1
   startDelay:
     scalar: 0
@@ -513,7 +513,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 858954858
+  randomSeed: -995906414
   InitialModule:
     serializedVersion: 3
     enabled: 1
