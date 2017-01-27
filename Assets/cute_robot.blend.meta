@@ -87,7 +87,421 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.5
+        functionName: StartSinking
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/shoulder_L
+        weight: 1
+      - path: Armature/shoulder_L/arm_L
+        weight: 1
+      - path: Armature/shoulder_L/arm_L/finger_000_L
+        weight: 1
+      - path: Armature/shoulder_L/arm_L/finger_001_L
+        weight: 1
+      - path: Armature/shoulder_L/arm_L/finger_002_L
+        weight: 1
+      - path: Armature/shoulder_R
+        weight: 1
+      - path: Armature/shoulder_R/arm_R
+        weight: 1
+      - path: Armature/shoulder_R/arm_R/finger_000_R
+        weight: 1
+      - path: Armature/shoulder_R/arm_R/finger_001_R
+        weight: 1
+      - path: Armature/shoulder_R/arm_R/finger_002_R
+        weight: 1
+      - path: Armature/spine
+        weight: 1
+      - path: Armature/spine/foot_control_L
+        weight: 1
+      - path: Armature/spine/foot_control_R
+        weight: 1
+      - path: Armature/spine/neck
+        weight: 1
+      - path: Armature/spine/neck/head
+        weight: 1
+      - path: Armature/spine/neck/head/eyes_0
+        weight: 1
+      - path: Armature/spine/thigh_L
+        weight: 1
+      - path: Armature/spine/thigh_L/leg_L
+        weight: 1
+      - path: Armature/spine/thigh_L/leg_L/foot_L
+        weight: 1
+      - path: Armature/spine/thigh_R
+        weight: 1
+      - path: Armature/spine/thigh_R/leg_R
+        weight: 1
+      - path: Armature/spine/thigh_R/leg_R/foot_R
+        weight: 1
+      - path: eyes
+        weight: 1
+      - path: robot
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: ArmatureAction_001
+      takeName: ArmatureAction_001
+      firstFrame: 0
+      lastFrame: 16
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/shoulder_L
+        weight: 1
+      - path: Armature/shoulder_L/arm_L
+        weight: 1
+      - path: Armature/shoulder_L/arm_L/finger_000_L
+        weight: 1
+      - path: Armature/shoulder_L/arm_L/finger_001_L
+        weight: 1
+      - path: Armature/shoulder_L/arm_L/finger_002_L
+        weight: 1
+      - path: Armature/shoulder_R
+        weight: 1
+      - path: Armature/shoulder_R/arm_R
+        weight: 1
+      - path: Armature/shoulder_R/arm_R/finger_000_R
+        weight: 1
+      - path: Armature/shoulder_R/arm_R/finger_001_R
+        weight: 1
+      - path: Armature/shoulder_R/arm_R/finger_002_R
+        weight: 1
+      - path: Armature/spine
+        weight: 1
+      - path: Armature/spine/foot_control_L
+        weight: 1
+      - path: Armature/spine/foot_control_R
+        weight: 1
+      - path: Armature/spine/neck
+        weight: 1
+      - path: Armature/spine/neck/head
+        weight: 1
+      - path: Armature/spine/neck/head/eyes_0
+        weight: 1
+      - path: Armature/spine/thigh_L
+        weight: 1
+      - path: Armature/spine/thigh_L/leg_L
+        weight: 1
+      - path: Armature/spine/thigh_L/leg_L/foot_L
+        weight: 1
+      - path: Armature/spine/thigh_R
+        weight: 1
+      - path: Armature/spine/thigh_R/leg_R
+        weight: 1
+      - path: Armature/spine/thigh_R/leg_R/foot_R
+        weight: 1
+      - path: eyes
+        weight: 1
+      - path: robot
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: ArmatureAction_003
+      takeName: ArmatureAction_003
+      firstFrame: 0
+      lastFrame: 18
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.72627735
+        functionName: StartSinking
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/shoulder_L
+        weight: 1
+      - path: Armature/shoulder_L/arm_L
+        weight: 1
+      - path: Armature/shoulder_L/arm_L/finger_000_L
+        weight: 1
+      - path: Armature/shoulder_L/arm_L/finger_001_L
+        weight: 1
+      - path: Armature/shoulder_L/arm_L/finger_002_L
+        weight: 1
+      - path: Armature/shoulder_R
+        weight: 1
+      - path: Armature/shoulder_R/arm_R
+        weight: 1
+      - path: Armature/shoulder_R/arm_R/finger_000_R
+        weight: 1
+      - path: Armature/shoulder_R/arm_R/finger_001_R
+        weight: 1
+      - path: Armature/shoulder_R/arm_R/finger_002_R
+        weight: 1
+      - path: Armature/spine
+        weight: 1
+      - path: Armature/spine/foot_control_L
+        weight: 1
+      - path: Armature/spine/foot_control_R
+        weight: 1
+      - path: Armature/spine/neck
+        weight: 1
+      - path: Armature/spine/neck/head
+        weight: 1
+      - path: Armature/spine/neck/head/eyes_0
+        weight: 1
+      - path: Armature/spine/thigh_L
+        weight: 1
+      - path: Armature/spine/thigh_L/leg_L
+        weight: 1
+      - path: Armature/spine/thigh_L/leg_L/foot_L
+        weight: 1
+      - path: Armature/spine/thigh_R
+        weight: 1
+      - path: Armature/spine/thigh_R/leg_R
+        weight: 1
+      - path: Armature/spine/thigh_R/leg_R/foot_R
+        weight: 1
+      - path: eyes
+        weight: 1
+      - path: robot
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: ArmatureAction_004
+      takeName: ArmatureAction_004
+      firstFrame: 0
+      lastFrame: 16
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/shoulder_L
+        weight: 1
+      - path: Armature/shoulder_L/arm_L
+        weight: 1
+      - path: Armature/shoulder_L/arm_L/finger_000_L
+        weight: 1
+      - path: Armature/shoulder_L/arm_L/finger_001_L
+        weight: 1
+      - path: Armature/shoulder_L/arm_L/finger_002_L
+        weight: 1
+      - path: Armature/shoulder_R
+        weight: 1
+      - path: Armature/shoulder_R/arm_R
+        weight: 1
+      - path: Armature/shoulder_R/arm_R/finger_000_R
+        weight: 1
+      - path: Armature/shoulder_R/arm_R/finger_001_R
+        weight: 1
+      - path: Armature/shoulder_R/arm_R/finger_002_R
+        weight: 1
+      - path: Armature/spine
+        weight: 1
+      - path: Armature/spine/foot_control_L
+        weight: 1
+      - path: Armature/spine/foot_control_R
+        weight: 1
+      - path: Armature/spine/neck
+        weight: 1
+      - path: Armature/spine/neck/head
+        weight: 1
+      - path: Armature/spine/neck/head/eyes_0
+        weight: 1
+      - path: Armature/spine/thigh_L
+        weight: 1
+      - path: Armature/spine/thigh_L/leg_L
+        weight: 1
+      - path: Armature/spine/thigh_L/leg_L/foot_L
+        weight: 1
+      - path: Armature/spine/thigh_R
+        weight: 1
+      - path: Armature/spine/thigh_R/leg_R
+        weight: 1
+      - path: Armature/spine/thigh_R/leg_R/foot_R
+        weight: 1
+      - path: eyes
+        weight: 1
+      - path: robot
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: ArmatureAction_005
+      takeName: ArmatureAction_005
+      firstFrame: 0
+      lastFrame: 16
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/shoulder_L
+        weight: 1
+      - path: Armature/shoulder_L/arm_L
+        weight: 1
+      - path: Armature/shoulder_L/arm_L/finger_000_L
+        weight: 1
+      - path: Armature/shoulder_L/arm_L/finger_001_L
+        weight: 1
+      - path: Armature/shoulder_L/arm_L/finger_002_L
+        weight: 1
+      - path: Armature/shoulder_R
+        weight: 1
+      - path: Armature/shoulder_R/arm_R
+        weight: 1
+      - path: Armature/shoulder_R/arm_R/finger_000_R
+        weight: 1
+      - path: Armature/shoulder_R/arm_R/finger_001_R
+        weight: 1
+      - path: Armature/shoulder_R/arm_R/finger_002_R
+        weight: 1
+      - path: Armature/spine
+        weight: 1
+      - path: Armature/spine/foot_control_L
+        weight: 1
+      - path: Armature/spine/foot_control_R
+        weight: 1
+      - path: Armature/spine/neck
+        weight: 1
+      - path: Armature/spine/neck/head
+        weight: 1
+      - path: Armature/spine/neck/head/eyes_0
+        weight: 1
+      - path: Armature/spine/thigh_L
+        weight: 1
+      - path: Armature/spine/thigh_L/leg_L
+        weight: 1
+      - path: Armature/spine/thigh_L/leg_L/foot_L
+        weight: 1
+      - path: Armature/spine/thigh_R
+        weight: 1
+      - path: Armature/spine/thigh_R/leg_R
+        weight: 1
+      - path: Armature/spine/thigh_R/leg_R/foot_R
+        weight: 1
+      - path: eyes
+        weight: 1
+      - path: robot
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []

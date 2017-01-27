@@ -55,6 +55,23 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
+    public void TakeDamage(int amount)
+    {
+        if (isDead)
+            return;
+
+        enemyAudio.Play();
+
+        currentHealth -= amount;
+
+        //hitParticles.transform.position = hitPoint;
+        //hitParticles.Play();
+
+        if (currentHealth <= 0)
+        {
+            Death();
+        }
+    }
 
     void Death ()
     {
@@ -72,7 +89,7 @@ public class EnemyHealth : MonoBehaviour
     public void StartSinking ()
     {
         GetComponent <UnityEngine.AI.NavMeshAgent> ().enabled = false;
-        GetComponent <Rigidbody> ().isKinematic = true;
+        //GetComponent <Rigidbody> ().isKinematic = true;
         isSinking = true;
         //ScoreManager.score += scoreValue;
         Destroy (gameObject, 2f);

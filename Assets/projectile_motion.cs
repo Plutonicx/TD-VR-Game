@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class projectile_motion : MonoBehaviour {
 
+    GameObject enemyTarget; //make this getable on fixed update.
     Transform enemyTransform; //make this getable on fixed update.
 
     ParticleSystem hitParticles;
@@ -13,6 +14,7 @@ public class projectile_motion : MonoBehaviour {
 
     public float projectileSpeed = 20;
     public float radius = 10;
+    int damageCaused = 60;
 
 	// Use this for initialization
 	void Awake() {
@@ -23,7 +25,8 @@ public class projectile_motion : MonoBehaviour {
 
     void TheStart( GameObject refObject)
     {
-        enemyTransform = refObject.GetComponent<Transform>();
+        enemyTarget = refObject;
+        enemyTransform = enemyTarget.GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -49,6 +52,10 @@ public class projectile_motion : MonoBehaviour {
         {
             if (isActive)
             {
+                EnemyHealth enemyHealth = enemyTarget.GetComponent<EnemyHealth>();
+
+                enemyHealth.TakeDamage(damageCaused);
+
                 hitParticles.Play();
                 dropletMesh.enabled = false;
                 isActive = false;
