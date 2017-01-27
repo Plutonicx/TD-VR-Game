@@ -21,30 +21,16 @@ public class projectile_motion : MonoBehaviour {
         isActive = true;
 	}
 
+    void TheStart( GameObject refObject)
+    {
+        enemyTransform = refObject.GetComponent<Transform>();
+    }
+
     // Update is called once per frame
     private void FixedUpdate()
     {
-        if (enemyTransform == null)
-        {
-            GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
-            // find the closest enemy
-            float closestDistance = 999;
-            float tempDistance;
-
-            foreach (GameObject enemy in enemies)
-            {
-                tempDistance = (enemy.GetComponent<Transform>().position - transform.position).sqrMagnitude;
-                if (Math.Sqrt(tempDistance) < closestDistance && Math.Sqrt(tempDistance) < radius)
-                {
-                    closestDistance = (float) Math.Sqrt(tempDistance);
-                    enemyTransform = enemy.GetComponent<Transform>();
-                }
-
-            }
-        }
-
-        if (enemyTransform != null){
+        if (enemyTransform != null && isActive){
             //enemyTransform = lockedEnemy.GetComponent<Transform>();
 
             Vector3 targetVector = (enemyTransform.position - transform.position);
@@ -66,7 +52,7 @@ public class projectile_motion : MonoBehaviour {
                 hitParticles.Play();
                 dropletMesh.enabled = false;
                 isActive = false;
-                Destroy(gameObject, 2f);
+                Destroy(gameObject, 1f);
             }
 
         }
