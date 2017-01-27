@@ -41,9 +41,10 @@ public class AmmoManager : MonoBehaviour {
     void Spawn () {
 
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-
+        
         // find the closest enemy
-        //todo - use spherecast to limit search within a small space.
+        //      todo - use spherecast to limit search within a small space.
+        //          - look for layerMask 'shootable.'
         GameObject enemyReference = null;
         float closestDistance = 999;
         float tempDistance = 0;
@@ -53,7 +54,6 @@ public class AmmoManager : MonoBehaviour {
             tempDistance = (float) Math.Sqrt((enmy.GetComponent<Transform>().position - transform.position).sqrMagnitude);
             if (tempDistance < radius && tempDistance < closestDistance)
             {
-                //Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
                 enemyReference = enmy;
                 closestDistance = tempDistance;
                 ammoLock = false;
