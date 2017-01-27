@@ -1,22 +1,72 @@
 fileFormatVersion: 2
 guid: 05de198b9a963e246a165c48e2a58269
-timeCreated: 1485346782
+timeCreated: 1485428863
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: eyes
-    400000: //RootNode
-    400002: eyes
-    2300000: //RootNode
-    2300002: eyes
-    3300000: //RootNode
-    3300002: eyes
+    100000: arm_L
+    100002: arm_R
+    100004: Armature
+    100006: //RootNode
+    100008: eyes
+    100010: eyes_0
+    100012: finger_000_L
+    100014: finger_000_R
+    100016: finger_001_L
+    100018: finger_001_R
+    100020: finger_002_L
+    100022: finger_002_R
+    100024: foot_control_L
+    100026: foot_control_R
+    100028: foot_L
+    100030: foot_R
+    100032: head
+    100034: leg_L
+    100036: leg_R
+    100038: neck
+    100040: robot
+    100042: shoulder_L
+    100044: shoulder_R
+    100046: spine
+    100048: thigh_L
+    100050: thigh_R
+    400000: arm_L
+    400002: arm_R
+    400004: Armature
+    400006: //RootNode
+    400008: eyes
+    400010: eyes_0
+    400012: finger_000_L
+    400014: finger_000_R
+    400016: finger_001_L
+    400018: finger_001_R
+    400020: finger_002_L
+    400022: finger_002_R
+    400024: foot_control_L
+    400026: foot_control_R
+    400028: foot_L
+    400030: foot_R
+    400032: head
+    400034: leg_L
+    400036: leg_R
+    400038: neck
+    400040: robot
+    400042: shoulder_L
+    400044: shoulder_R
+    400046: spine
+    400048: thigh_L
+    400050: thigh_R
     4300000: robot
     4300002: eyes
     7400000: Default Take
+    7400002: ArmatureAction_001
+    7400004: ArmatureAction_003
+    7400006: ArmatureAction_004
+    7400008: ArmatureAction_005
     9500000: //RootNode
+    13700000: eyes
+    13700002: robot
   materials:
     importMaterials: 1
     materialName: 0
