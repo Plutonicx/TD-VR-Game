@@ -63,8 +63,11 @@ public class AmmoManager : MonoBehaviour {
 
         if (enemyReference != null)
         {
-            GameObject ammo = Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
-            ammo.SendMessage("TheStart", enemyReference);
+            if (enemyReference.GetComponent<EnemyHealth>().currentHealth > 0)
+            {
+                GameObject ammo = Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
+                ammo.SendMessage("TheStart", enemyReference);
+            }
         }
 
     }

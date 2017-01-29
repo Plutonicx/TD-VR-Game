@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,8 @@ public class TowerGhosting : MonoBehaviour {
     Transform ghostTowerTransform;
 
     public GameObject tower;
+    public GameObject towerHolder;
+    GameObject ghostTower;
 
     int floorMask;
     float camRayLength = 100f;
@@ -16,11 +19,25 @@ public class TowerGhosting : MonoBehaviour {
     void Awake () {
         floorMask = LayerMask.GetMask("Floor");
         GameObject[] ghosts = GameObject.FindGameObjectsWithTag("Ghost"); //TODO: On fixed update search for ghost towers.
-        ghostTowerTransform = ghosts[0].GetComponent<Transform>();
+        try
+        {
+            ghostTowerTransform = ghosts[0].GetComponent<Transform>();
+        }
+        catch(Exception e)
+        {
+
+        }
+        
+    }
+
+    public void CreateTowerGhost()
+    {
+        ghostTower = Instantiate(towerHolder, new Vector3(0,0.9f,0), Quaternion.Euler(-90,0,0));
+        ghostTowerTransform = ghostTower.transform;
     }
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void Update () {
 
         if (ghostTowerTransform != null)
         {
@@ -46,6 +63,13 @@ public class TowerGhosting : MonoBehaviour {
                 Instantiate(tower, ghostTowerTransform.position, ghostTowerTransform.rotation);
             }
 
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            Destroy(ghostTower, 0f);
+            //ghostTower = null;
+            ghostTowerTransform = null;
         }
 
     }
