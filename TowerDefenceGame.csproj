@@ -78,6 +78,8 @@
     <Compile Include="Assets\CameraFollow.cs" />
     <Compile Include="Assets\CubeColorTransparent.cs" />
     <Compile Include="Assets\My_Assets\Scripts\AmmoManager.cs" />
+    <Compile Include="Assets\My_Assets\Scripts\EnemySpawnerScript.cs" />
+    <Compile Include="Assets\My_Assets\Scripts\TowerGhosting.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />

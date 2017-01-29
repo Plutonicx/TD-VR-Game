@@ -9,9 +9,10 @@ public class CameraFollow : MonoBehaviour {
 
     public float smoothing = 5f;
 
-    void Start () {
-		
-	}
+
+    void Awake () {
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -24,4 +25,6 @@ public class CameraFollow : MonoBehaviour {
 
         transform.position = Vector3.Lerp(transform.position, transform.position + targetCamPos, smoothing * Time.deltaTime);
     }
+
+
 }
