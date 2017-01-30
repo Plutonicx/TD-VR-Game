@@ -75,6 +75,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ButtonModifyToggle.cs" />
     <Compile Include="Assets\CameraFollow.cs" />
     <Compile Include="Assets\CubeColorTransparent.cs" />
     <Compile Include="Assets\My_Assets\Scripts\AmmoManager.cs" />
