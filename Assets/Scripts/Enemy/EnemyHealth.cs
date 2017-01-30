@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -75,6 +76,17 @@ public class EnemyHealth : MonoBehaviour
 
     void Death ()
     {
+        try
+        {
+            GameObject[] resources = GameObject.FindGameObjectsWithTag("ResourceManager");
+            ResourceManage resourceManager = resources[0].GetComponent<ResourceManage>();
+            resourceManager.Transaction(5);
+        }
+        catch(Exception e)
+        {
+
+        }
+
         isDead = true;
 
         capsuleCollider.isTrigger = true;

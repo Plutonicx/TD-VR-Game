@@ -2,15 +2,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TowerGhosting : MonoBehaviour {
 
     Vector3 targetCamPos;
     Transform ghostTowerTransform;
 
+    public GameObject resourceManager;
     public GameObject tower;
     public GameObject towerHolder;
     GameObject ghostTower;
+
+    ResourceManage myCoins;
 
     int floorMask;
     float camRayLength = 100f;
@@ -19,6 +23,9 @@ public class TowerGhosting : MonoBehaviour {
     void Awake () {
         floorMask = LayerMask.GetMask("Floor");
         GameObject[] ghosts = GameObject.FindGameObjectsWithTag("Ghost"); //TODO: On fixed update search for ghost towers.
+
+        myCoins = resourceManager.GetComponent<ResourceManage>();
+
         try
         {
             ghostTowerTransform = ghosts[0].GetComponent<Transform>();
@@ -58,9 +65,10 @@ public class TowerGhosting : MonoBehaviour {
             }
 
 
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && (int) myCoins.coins >= 20)
             {
                 Instantiate(tower, ghostTowerTransform.position, ghostTowerTransform.rotation);
+                myCoins.Transaction(-20);
             }
 
         }
@@ -70,6 +78,11 @@ public class TowerGhosting : MonoBehaviour {
             Destroy(ghostTower, 0f);
             //ghostTower = null;
             ghostTowerTransform = null;
+        }
+
+        if (ghostTowerTransform != null && (int) myCoins.coins < 20)
+        {
+            ghostTower.GetComponent<Renderer>().material.color = new Color(1,0,0,0.8f);
         }
 
     }
