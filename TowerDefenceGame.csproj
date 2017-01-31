@@ -92,6 +92,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerShooting.cs" />
+    <Compile Include="Assets\TowerHolder.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\TutorialInfo.cs" />
     <Compile Include="Assets\_CompletedAssets\MobileInput\Scripts\CrossPlatformInputManager.cs" />
     <Compile Include="Assets\_CompletedAssets\MobileInput\Scripts\Joystick.cs" />
@@ -152,6 +153,7 @@
     <Compile Include="Assets\_CompletedAssets\Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\_CompletedAssets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\_CompletedAssets\Scripts\Player\PlayerShooting.cs" />
+    <Compile Include="Assets\lightningMotion.cs" />
     <Compile Include="Assets\projectile_motion.cs" />
   </ItemGroup>
   <ItemGroup>

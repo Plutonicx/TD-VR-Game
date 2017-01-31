@@ -15,6 +15,7 @@ public class TowerGhosting : MonoBehaviour {
     GameObject ghostTower;
 
     ResourceManage myCoins;
+    TowerHolder holder;
 
     int floorMask;
     float camRayLength = 100f;
@@ -22,13 +23,15 @@ public class TowerGhosting : MonoBehaviour {
     // Use this for initialization
     void Awake () {
         floorMask = LayerMask.GetMask("Floor");
-        GameObject[] ghosts = GameObject.FindGameObjectsWithTag("Ghost"); //TODO: On fixed update search for ghost towers.
-
+        //GameObject[] ghosts = GameObject.FindGameObjectsWithTag("Ghost"); //TODO: On fixed update search for ghost towers.
+        ghostTowerTransform = null;
         myCoins = resourceManager.GetComponent<ResourceManage>();
+
+        holder = GetComponent<TowerHolder>();
 
         try
         {
-            ghostTowerTransform = ghosts[0].GetComponent<Transform>();
+          //  ghostTowerTransform = ghosts[0].GetComponent<Transform>();
         }
         catch(Exception e)
         {
@@ -42,9 +45,23 @@ public class TowerGhosting : MonoBehaviour {
         ghostTower = Instantiate(towerHolder, new Vector3(0,0.9f,0), Quaternion.Euler(-90,0,0));
         ghostTowerTransform = ghostTower.transform;
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    public void CreateTowerGhost(string towerType)
+    {
+        tower = holder.getTowerFromName(towerType);
+        towerHolder = holder.getGhostTowerFromName(towerType);
+
+        // bugs are temporarily fixed here. Need to change this in the future.
+        if (towerType == "water")
+            ghostTower = Instantiate(towerHolder, new Vector3(0, 0.9f, 0), Quaternion.Euler(-90, 0, 0));
+        else if (towerType == "lightning")
+            ghostTower = Instantiate(towerHolder, new Vector3(0, 0.5f, 0), Quaternion.Euler(0, 0, 0));
+
+        ghostTowerTransform = ghostTower.transform;
+    }
+
+    // Update is called once per frame
+    void Update () {
 
         if (ghostTowerTransform != null)
         {
