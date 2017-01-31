@@ -55,7 +55,7 @@ public class TowerGhosting : MonoBehaviour {
         if (towerType == "water")
             ghostTower = Instantiate(towerHolder, new Vector3(0, 0.9f, 0), Quaternion.Euler(-90, 0, 0));
         else if (towerType == "lightning")
-            ghostTower = Instantiate(towerHolder, new Vector3(0, 0.5f, 0), Quaternion.Euler(0, 0, 0));
+            ghostTower = Instantiate(towerHolder, new Vector3(0, 0.9f, 0), Quaternion.Euler(-90f, 0, 0));
 
         ghostTowerTransform = ghostTower.transform;
     }
@@ -99,7 +99,14 @@ public class TowerGhosting : MonoBehaviour {
 
         if (ghostTowerTransform != null && (int) myCoins.coins < 20)
         {
-            ghostTower.GetComponent<Renderer>().material.color = new Color(1,0,0,0.8f);
+            try
+            {
+                ghostTower.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 0.8f);
+            }
+            catch(Exception e)
+            {
+
+            }
         }
 
     }

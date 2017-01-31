@@ -19,8 +19,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4636578790914360}
-  - component: {fileID: 33451204925830118}
-  - component: {fileID: 23541967908726706}
   m_Layer: 0
   m_Name: lightning_tower
   m_TagString: Untagged
@@ -38,6 +36,8 @@ GameObject:
   - component: {fileID: 4568145500051314}
   - component: {fileID: 95292374404720002}
   - component: {fileID: 114104732025826396}
+  - component: {fileID: 33334461095598584}
+  - component: {fileID: 23999824575895842}
   m_Layer: 0
   m_Name: lightning_tower
   m_TagString: Untagged
@@ -67,7 +67,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1838402327013486}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.043, y: 6.427, z: 0.082}
+  m_LocalPosition: {x: -0.002, y: 0.01, z: 5.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4568145500051314}
@@ -80,7 +80,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1132860504075440}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.771069, y: 0.49441493, z: 5.0560303}
+  m_LocalPosition: {x: 10.998117, y: 0.49441493, z: 3.1907682}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 4636578790914360}
@@ -101,12 +101,12 @@ Transform:
   m_Father: {fileID: 4568145500051314}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23541967908726706
+--- !u!23 &23999824575895842
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1123597576458972}
+  m_GameObject: {fileID: 1132860504075440}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -132,12 +132,12 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &33451204925830118
+--- !u!33 &33334461095598584
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1123597576458972}
+  m_GameObject: {fileID: 1132860504075440}
   m_Mesh: {fileID: 4300000, guid: 4f18f4cb8e73ba443821e068c432e0b3, type: 3}
 --- !u!95 &95292374404720002
 Animator:
