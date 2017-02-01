@@ -52,10 +52,8 @@ public class TowerGhosting : MonoBehaviour {
         towerHolder = holder.getGhostTowerFromName(towerType);
 
         // bugs are temporarily fixed here. Need to change this in the future.
-        if (towerType == "water")
-            ghostTower = Instantiate(towerHolder, new Vector3(0, 0.9f, 0), Quaternion.Euler(-90, 0, 0));
-        else if (towerType == "lightning")
-            ghostTower = Instantiate(towerHolder, new Vector3(0, 0.9f, 0), Quaternion.Euler(-90f, 0, 0));
+        ghostTower = Instantiate(towerHolder, new Vector3(0, 0.9f, 0), Quaternion.Euler(-90, 0, 0));
+
 
         ghostTowerTransform = ghostTower.transform;
     }
@@ -101,7 +99,7 @@ public class TowerGhosting : MonoBehaviour {
         {
             try
             {
-                ghostTower.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 0.8f);
+               // ghostTower.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 0.8f);
             }
             catch(Exception e)
             {

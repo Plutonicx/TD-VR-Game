@@ -75,14 +75,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\BuildToggle.cs" />
-    <Compile Include="Assets\ButtonModifyToggle.cs" />
-    <Compile Include="Assets\CameraFollow.cs" />
-    <Compile Include="Assets\CubeColorTransparent.cs" />
     <Compile Include="Assets\My_Assets\Scripts\AmmoManager.cs" />
+    <Compile Include="Assets\My_Assets\Scripts\BuildToggle.cs" />
+    <Compile Include="Assets\My_Assets\Scripts\ButtonModifyToggle.cs" />
+    <Compile Include="Assets\My_Assets\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\My_Assets\Scripts\CubeColorTransparent.cs" />
     <Compile Include="Assets\My_Assets\Scripts\EnemySpawnerScript.cs" />
+    <Compile Include="Assets\My_Assets\Scripts\GhostColourSwitcher.cs" />
+    <Compile Include="Assets\My_Assets\Scripts\ResourceManage.cs" />
     <Compile Include="Assets\My_Assets\Scripts\TowerGhosting.cs" />
-    <Compile Include="Assets\ResourceManage.cs" />
+    <Compile Include="Assets\My_Assets\Scripts\TowerHolder.cs" />
+    <Compile Include="Assets\My_Assets\Scripts\lightningMotion.cs" />
+    <Compile Include="Assets\My_Assets\Scripts\projectile_motion.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
@@ -92,7 +96,6 @@
     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerShooting.cs" />
-    <Compile Include="Assets\TowerHolder.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\TutorialInfo.cs" />
     <Compile Include="Assets\_CompletedAssets\MobileInput\Scripts\CrossPlatformInputManager.cs" />
     <Compile Include="Assets\_CompletedAssets\MobileInput\Scripts\Joystick.cs" />
@@ -153,8 +156,6 @@
     <Compile Include="Assets\_CompletedAssets\Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\_CompletedAssets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\_CompletedAssets\Scripts\Player\PlayerShooting.cs" />
-    <Compile Include="Assets\lightningMotion.cs" />
-    <Compile Include="Assets\projectile_motion.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Fonts\LuckiestGuy\LICENSE.txt" />
