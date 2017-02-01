@@ -133,7 +133,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4225811067807198, guid: da0891004e8a33645ab2e31ff07b7ec8, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 114343658864865688, guid: da0891004e8a33645ab2e31ff07b7ec8,
         type: 2}
@@ -522,7 +522,7 @@ RectTransform:
   - {fileID: 889711887}
   - {fileID: 1014188743}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1154,7 +1154,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1014188742
 GameObject:
@@ -1402,9 +1402,10 @@ GameObject:
   - component: {fileID: 1094302068}
   - component: {fileID: 1094302067}
   - component: {fileID: 1094302070}
-  m_Layer: 5
+  - component: {fileID: 1094302071}
+  m_Layer: 13
   m_Name: ModifyButton
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1425,7 +1426,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -372, y: -5}
+  m_AnchoredPosition: {x: -270.9, y: -5}
   m_SizeDelta: {x: 108, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1094302067
@@ -1467,8 +1468,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1094302070}
-        m_MethodName: ToggleAdditionalOptions
+      - m_Target: {fileID: 1533674164}
+        m_MethodName: KeepSelected
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1525,6 +1526,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   additionalOptionsPanel: {fileID: 0}
+--- !u!114 &1094302071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1094302065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1533674164}
+          m_MethodName: KeepSelected
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1533674164}
+          m_MethodName: DontKeepSelected
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1176762781
 GameObject:
   m_ObjectHideFlags: 0
@@ -1750,6 +1798,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4670547616539238, guid: 67711bdc474bb1546ba9039811259460, type: 2}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 135158837196043396, guid: 67711bdc474bb1546ba9039811259460,
+        type: 2}
+      propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2040,6 +2093,7 @@ GameObject:
   - component: {fileID: 1533674162}
   - component: {fileID: 1533674161}
   - component: {fileID: 1533674163}
+  - component: {fileID: 1533674164}
   m_Layer: 0
   m_Name: TowerSpawner
   m_TagString: Untagged
@@ -2093,6 +2147,17 @@ MonoBehaviour:
     type: 2}
   lightningTowerGhost: {fileID: 1966282012370804, guid: 22d4927e9786c25468ee8a4a6caf741d,
     type: 2}
+--- !u!114 &1533674164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1533674160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acde393cb64fe074a90ed16cd23fc63e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1535188239
 Prefab:
   m_ObjectHideFlags: 0

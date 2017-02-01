@@ -11,6 +11,7 @@ public class GhostColourSwitcher : MonoBehaviour {
     public Color newColor;
     Color oldColor;
 
+
 	// Use this for initialization
 	void Start () {
         ghostRender = GetComponent<Renderer>();

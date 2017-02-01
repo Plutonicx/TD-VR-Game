@@ -22,7 +22,9 @@ GameObject:
   - component: {fileID: 33504784300381828}
   - component: {fileID: 23752844497081968}
   - component: {fileID: 95722658264745496}
-  m_Layer: 0
+  - component: {fileID: 114001642304361404}
+  - component: {fileID: 65926996320179074}
+  m_Layer: 12
   m_Name: water_tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +95,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1378515561240728}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 10.95, y: 0.912, z: 4.02}
+  m_LocalPosition: {x: 10.864677, y: 0.49441493, z: 4.217782}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 4588317611133396}
@@ -139,6 +141,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1378515561240728}
   m_Mesh: {fileID: 4300000, guid: 9b807faf77c1b814c9cf1c41557ed5a4, type: 3}
+--- !u!65 &65926996320179074
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1378515561240728}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2.0000014, z: 5.2129974}
+  m_Center: {x: 0, y: -0.0000004768373, z: 1.6064984}
 --- !u!95 &95722658264745496
 Animator:
   serializedVersion: 3
@@ -156,6 +170,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114001642304361404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1378515561240728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 840e4d4c40aa3224aa7d891f86cfac7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newColor: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 0.878}
 --- !u!114 &114116282863424334
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -38,7 +38,9 @@ GameObject:
   - component: {fileID: 114104732025826396}
   - component: {fileID: 33334461095598584}
   - component: {fileID: 23999824575895842}
-  m_Layer: 0
+  - component: {fileID: 65934554944088064}
+  - component: {fileID: 114814829305759174}
+  m_Layer: 12
   m_Name: lightning_tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +82,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1132860504075440}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.998117, y: 0.49441493, z: 3.1907682}
+  m_LocalPosition: {x: 11.655195, y: 0.49441493, z: 3.7189083}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 4636578790914360}
@@ -139,6 +141,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1132860504075440}
   m_Mesh: {fileID: 4300000, guid: 4f18f4cb8e73ba443821e068c432e0b3, type: 3}
+--- !u!65 &65934554944088064
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1132860504075440}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 6.375739}
+  m_Center: {x: 0, y: 0, z: 2.1878695}
 --- !u!95 &95292374404720002
 Animator:
   serializedVersion: 3
@@ -171,3 +185,15 @@ MonoBehaviour:
   spawnPoint: {fileID: 4228830644141618}
   enemy: {fileID: 1834063256659324, guid: 12d341e45e060b545b7d330819b1941a, type: 2}
   radius: 10
+--- !u!114 &114814829305759174
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1132860504075440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 840e4d4c40aa3224aa7d891f86cfac7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newColor: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 0.8784314}
