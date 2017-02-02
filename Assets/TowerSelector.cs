@@ -41,6 +41,7 @@ public class TowerSelector : MonoBehaviour {
                 try
                 {
                     towerColor.DeSelectTower();
+                    towerColor = null;
                 }
                 catch (Exception e) { }
             }
