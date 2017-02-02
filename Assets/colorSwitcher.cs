@@ -9,6 +9,8 @@ public class colorSwitcher : MonoBehaviour {
     Color oldColor;
     bool selected;
 
+    public GameObject towerUpgrade;
+
     int towerMask;
     float camRayLength = 100f;
 
@@ -44,6 +46,16 @@ public class colorSwitcher : MonoBehaviour {
         else
         {
             myRender.material.color = oldColor;
+        }
+    }
+
+    public void UpgradeTower()
+    {
+        if ( towerUpgrade != null)
+        {
+            
+            Instantiate(towerUpgrade, gameObject.transform.position, gameObject.transform.rotation);
+            Destroy(gameObject, 0f);
         }
     }
 }

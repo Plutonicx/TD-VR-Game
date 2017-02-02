@@ -9,6 +9,7 @@ public class TowerSelector : MonoBehaviour {
     int buttonMask;
     float camRayLength = 100f;
     colorSwitcher towerColor;
+    GameObject tower;
     bool keepSelected;
 
     // Use this for initialization
@@ -29,7 +30,7 @@ public class TowerSelector : MonoBehaviour {
 
             if (Physics.Raycast(camRay, out selectHit, camRayLength, towerMask))
             {
-                towerColor = selectHit.collider.GetComponent<colorSwitcher>(); ;
+                towerColor = selectHit.collider.GetComponent<colorSwitcher>();
                 towerColor.SelectTower();
 
                 //newPosition.y = 0;
@@ -59,5 +60,14 @@ public class TowerSelector : MonoBehaviour {
     public void DontKeepSelected()
     {
         keepSelected = false;
+    }
+
+    public void UpgradeSelectedTower()
+    {
+        try
+        {
+            towerColor.UpgradeTower();
+        }
+        catch (Exception e) { }
     }
 }

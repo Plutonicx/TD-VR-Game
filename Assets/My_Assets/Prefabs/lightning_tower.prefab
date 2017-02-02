@@ -197,3 +197,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newColor: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 0.8784314}
+  towerUpgrade: {fileID: 1378515561240728, guid: 8fdcad563260d994d8e425940433cd6b,
+    type: 2}
