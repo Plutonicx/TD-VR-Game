@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 114531820302350828}
   - component: {fileID: 114513046254354436}
   - component: {fileID: 114942066420277318}
+  - component: {fileID: 114538260699316350}
   m_Layer: 9
   m_Name: ZomBear
   m_TagString: Enemy
@@ -344,6 +345,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f58c1d9ce56e1749830b8aebe8ba3bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114538260699316350
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1973015146731280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f722f652e6b6e1642b1e6cc88d8ecd7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {fileID: 0}
+  resources: {fileID: 0}
 --- !u!114 &114942066420277318
 MonoBehaviour:
   m_ObjectHideFlags: 1

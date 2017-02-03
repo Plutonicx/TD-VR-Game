@@ -12,10 +12,13 @@ public class TowerGhosting : MonoBehaviour {
     public GameObject resourceManager;
     public GameObject tower;
     public GameObject towerHolder;
+    public Terrain terrain;
     GameObject ghostTower;
 
+    
     ResourceManage myCoins;
     TowerHolder holder;
+    TowerSelector towerSelect;
 
     int floorMask;
     float camRayLength = 100f;
@@ -26,7 +29,7 @@ public class TowerGhosting : MonoBehaviour {
         //GameObject[] ghosts = GameObject.FindGameObjectsWithTag("Ghost"); //TODO: On fixed update search for ghost towers.
         ghostTowerTransform = null;
         myCoins = resourceManager.GetComponent<ResourceManage>();
-
+        towerSelect = GetComponent<TowerSelector>();
         holder = GetComponent<TowerHolder>();
 
         try
@@ -82,8 +85,11 @@ public class TowerGhosting : MonoBehaviour {
 
             if (Input.GetMouseButtonDown(0) && (int) myCoins.coins >= 20)
             {
-                Instantiate(tower, ghostTowerTransform.position, ghostTowerTransform.rotation);
-                myCoins.Transaction(-20);
+                if (IsNotOverlappingOtherTowers(ghostTowerTransform.position) && IsNotOnWalkWay(ghostTowerTransform.position))
+                {
+                    Instantiate(tower, ghostTowerTransform.position, ghostTowerTransform.rotation);
+                    myCoins.Transaction(-20);
+                }
             }
 
         }
@@ -107,6 +113,37 @@ public class TowerGhosting : MonoBehaviour {
             }
         }
 
+    }
+
+    bool IsNotOverlappingOtherTowers(Vector3 position)
+    {
+        GameObject[] towers = GameObject.FindGameObjectsWithTag("Tower");
+
+        foreach(GameObject tower in towers)
+        {
+            if (Math.Abs(tower.transform.position.x - position.x) < 1 && Math.Abs(tower.transform.position.y - position.y) < 1)
+            {
+                towerSelect.DeSelect();
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    bool IsNotOnWalkWay(Vector3 posiition)
+    {
+        float x = posiition.x;
+        float z = posiition.z;
+        float y = posiition.y;
+
+        if (terrain.SampleHeight(new Vector3(x+0.5f,y,z+0.5f)) < 0.4 ||
+            terrain.SampleHeight(new Vector3(x + 0.5f, y, z - 0.5f)) < 0.4 ||
+            terrain.SampleHeight(new Vector3(x - 0.5f, y, z + 0.5f)) < 0.4 ||
+            terrain.SampleHeight(new Vector3(x - 0.5f, y, z - 0.5f)) < 0.4)
+            return false;
+
+        return true;
     }
 
 }

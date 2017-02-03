@@ -75,6 +75,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\EnemyDamage.cs" />
     <Compile Include="Assets\My_Assets\Scripts\AmmoManager.cs" />
     <Compile Include="Assets\My_Assets\Scripts\BuildToggle.cs" />
     <Compile Include="Assets\My_Assets\Scripts\ButtonModifyToggle.cs" />
@@ -85,6 +86,8 @@
     <Compile Include="Assets\My_Assets\Scripts\ResourceManage.cs" />
     <Compile Include="Assets\My_Assets\Scripts\TowerGhosting.cs" />
     <Compile Include="Assets\My_Assets\Scripts\TowerHolder.cs" />
+    <Compile Include="Assets\My_Assets\Scripts\TowerSelect.cs" />
+    <Compile Include="Assets\My_Assets\Scripts\TowerSelector.cs" />
     <Compile Include="Assets\My_Assets\Scripts\lightningMotion.cs" />
     <Compile Include="Assets\My_Assets\Scripts\projectile_motion.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
@@ -96,7 +99,6 @@
     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerShooting.cs" />
-    <Compile Include="Assets\TowerSelector.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\TutorialInfo.cs" />
     <Compile Include="Assets\_CompletedAssets\MobileInput\Scripts\CrossPlatformInputManager.cs" />
     <Compile Include="Assets\_CompletedAssets\MobileInput\Scripts\Joystick.cs" />
@@ -157,7 +159,6 @@
     <Compile Include="Assets\_CompletedAssets\Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\_CompletedAssets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\_CompletedAssets\Scripts\Player\PlayerShooting.cs" />
-    <Compile Include="Assets\colorSwitcher.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Fonts\LuckiestGuy\LICENSE.txt" />

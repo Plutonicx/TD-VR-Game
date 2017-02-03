@@ -39,10 +39,10 @@ GameObject:
   - component: {fileID: 33334461095598584}
   - component: {fileID: 23999824575895842}
   - component: {fileID: 65934554944088064}
-  - component: {fileID: 114814829305759174}
+  - component: {fileID: 114149972413115594}
   m_Layer: 12
   m_Name: lightning_tower
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -185,7 +185,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 4228830644141618}
   enemy: {fileID: 1834063256659324, guid: 12d341e45e060b545b7d330819b1941a, type: 2}
   radius: 10
---- !u!114 &114814829305759174
+--- !u!114 &114149972413115594
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -193,9 +193,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1132860504075440}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 840e4d4c40aa3224aa7d891f86cfac7f, type: 3}
+  m_Script: {fileID: 11500000, guid: fb5afda3cb1a61a479d9622267bdad6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newColor: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 0.8784314}
+  newColor: {r: 1, g: 1, b: 1, a: 0.828}
   towerUpgrade: {fileID: 1378515561240728, guid: 8fdcad563260d994d8e425940433cd6b,
     type: 2}

@@ -7,10 +7,12 @@ public class ResourceManage : MonoBehaviour {
 
     public int coins;
     public Text uiText;
+    public Slider healthSlider;
+    int health;
 
 	// Use this for initialization
 	void Start () {
-		
+        health = 100;	
 	}
 	
 	// Update is called once per frame
@@ -22,5 +24,12 @@ public class ResourceManage : MonoBehaviour {
     {
         coins += amount;
         uiText.text = coins.ToString();
+    }
+
+    public void TakeDamage(int amount)
+    {
+        health -= amount;
+
+        healthSlider.value = health;
     }
 }

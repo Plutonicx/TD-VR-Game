@@ -22,11 +22,11 @@ GameObject:
   - component: {fileID: 33504784300381828}
   - component: {fileID: 23752844497081968}
   - component: {fileID: 95722658264745496}
-  - component: {fileID: 114001642304361404}
   - component: {fileID: 65926996320179074}
+  - component: {fileID: 114748458178636948}
   m_Layer: 12
   m_Name: water_tower
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,20 +170,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114001642304361404
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1378515561240728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 840e4d4c40aa3224aa7d891f86cfac7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newColor: {r: 0.9411765, g: 0.9411765, b: 0.9411765, a: 0.878}
-  towerUpgrade: {fileID: 1132860504075440, guid: 3baaa016e377d5044a7d09f7a4f2aa9e,
-    type: 2}
 --- !u!114 &114116282863424334
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -199,3 +185,17 @@ MonoBehaviour:
   spawnPoint: {fileID: 4588317611133396}
   enemy: {fileID: 1444786413392896, guid: 8312ab0f720e56b49a6bc147e81fa6c2, type: 2}
   radius: 10.5
+--- !u!114 &114748458178636948
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1378515561240728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb5afda3cb1a61a479d9622267bdad6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newColor: {r: 1, g: 1, b: 1, a: 0.828}
+  towerUpgrade: {fileID: 1132860504075440, guid: 3baaa016e377d5044a7d09f7a4f2aa9e,
+    type: 2}

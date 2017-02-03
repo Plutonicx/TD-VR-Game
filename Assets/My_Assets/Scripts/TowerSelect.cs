@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class colorSwitcher : MonoBehaviour {
+public class TowerSelect : MonoBehaviour {
 
     Renderer myRender;
     public Color newColor;
