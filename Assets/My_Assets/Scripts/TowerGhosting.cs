@@ -121,7 +121,7 @@ public class TowerGhosting : MonoBehaviour {
 
         foreach(GameObject tower in towers)
         {
-            if (Math.Abs(tower.transform.position.x - position.x) < 1 && Math.Abs(tower.transform.position.y - position.y) < 1)
+            if (Math.Abs(tower.transform.position.x - position.x) < 1 && Math.Abs(tower.transform.position.z - position.z) < 1)
             {
                 towerSelect.DeSelect();
                 return false;
@@ -137,10 +137,15 @@ public class TowerGhosting : MonoBehaviour {
         float z = posiition.z;
         float y = posiition.y;
 
-        if (terrain.SampleHeight(new Vector3(x+0.5f,y,z+0.5f)) < 0.4 ||
-            terrain.SampleHeight(new Vector3(x + 0.5f, y, z - 0.5f)) < 0.4 ||
-            terrain.SampleHeight(new Vector3(x - 0.5f, y, z + 0.5f)) < 0.4 ||
-            terrain.SampleHeight(new Vector3(x - 0.5f, y, z - 0.5f)) < 0.4)
+        float h1 = terrain.SampleHeight(new Vector3(x + 0.5f, y, z + 0.5f));
+        float h2 = terrain.SampleHeight(new Vector3(x + 0.5f, y, z - 0.5f));
+        float h3 = terrain.SampleHeight(new Vector3(x - 0.5f, y, z + 0.5f));
+        float h4 = terrain.SampleHeight(new Vector3(x - 0.5f, y, z - 0.5f));
+
+        if (h1 < 0.25 ||
+            h2 < 0.25 ||
+            h3 < 0.25 ||
+            h4 < 0.25)
             return false;
 
         return true;
