@@ -1002,6 +1002,7 @@ MonoBehaviour:
   - {fileID: 1385596202}
   - {fileID: 1597901283}
   - {fileID: 956949258}
+  settingsPanel: {fileID: 1137187789}
 --- !u!114 &449875841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1126,6 +1127,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1692329607}
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &465434488
@@ -1170,6 +1182,8 @@ GameObject:
   m_Component:
   - component: {fileID: 465848540}
   - component: {fileID: 465848541}
+  - component: {fileID: 465848543}
+  - component: {fileID: 465848542}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -1204,6 +1218,35 @@ MonoBehaviour:
   spawnTime: 1
   enemy: {fileID: 1973015146731280, guid: 67711bdc474bb1546ba9039811259460, type: 2}
   maxEnemies: 10
+--- !u!114 &465848542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 465848539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e464014799b094a44ae5584453759da1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnDelay: 3
+  waves:
+  - {fileID: 465848541}
+  - {fileID: 465848543}
+--- !u!114 &465848543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 465848539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee477873f802fb54484e82af32ace513, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnTime: 0.75
+  enemy: {fileID: 1973015146731280, guid: 67711bdc474bb1546ba9039811259460, type: 2}
+  maxEnemies: 15
 --- !u!1 &468002886
 GameObject:
   m_ObjectHideFlags: 0
@@ -3553,6 +3596,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 754097478}
         m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1692329607}
+        m_MethodName: set_interactable
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

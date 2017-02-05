@@ -75,22 +75,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\EnemyDamage.cs" />
-    <Compile Include="Assets\GameAlive.cs" />
-    <Compile Include="Assets\GameButtonShortcuts.cs" />
-    <Compile Include="Assets\KeyShortcuts.cs" />
     <Compile Include="Assets\My_Assets\Scripts\AmmoManager.cs" />
     <Compile Include="Assets\My_Assets\Scripts\BuildToggle.cs" />
     <Compile Include="Assets\My_Assets\Scripts\ButtonModifyToggle.cs" />
     <Compile Include="Assets\My_Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\My_Assets\Scripts\CubeColorTransparent.cs" />
+    <Compile Include="Assets\My_Assets\Scripts\EnemyDamage.cs" />
     <Compile Include="Assets\My_Assets\Scripts\EnemySpawnerScript.cs" />
+    <Compile Include="Assets\My_Assets\Scripts\GameAlive.cs" />
+    <Compile Include="Assets\My_Assets\Scripts\GameButtonShortcuts.cs" />
     <Compile Include="Assets\My_Assets\Scripts\GhostColourSwitcher.cs" />
+    <Compile Include="Assets\My_Assets\Scripts\KeyShortcuts.cs" />
     <Compile Include="Assets\My_Assets\Scripts\ResourceManage.cs" />
     <Compile Include="Assets\My_Assets\Scripts\TowerGhosting.cs" />
     <Compile Include="Assets\My_Assets\Scripts\TowerHolder.cs" />
     <Compile Include="Assets\My_Assets\Scripts\TowerSelect.cs" />
     <Compile Include="Assets\My_Assets\Scripts\TowerSelector.cs" />
+    <Compile Include="Assets\My_Assets\Scripts\WaveCreator.cs" />
     <Compile Include="Assets\My_Assets\Scripts\lightningMotion.cs" />
     <Compile Include="Assets\My_Assets\Scripts\projectile_motion.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />

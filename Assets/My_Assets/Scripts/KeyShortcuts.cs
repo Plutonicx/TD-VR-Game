@@ -7,6 +7,7 @@ public class KeyShortcuts : MonoBehaviour {
 
     public GameObject menuPanel;
     public Button[] gameButtons;
+    public GameObject settingsPanel;
 
     bool menuActive = false;
     GameAlive gameAlive;
@@ -18,7 +19,7 @@ public class KeyShortcuts : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.Escape) && gameAlive.IsGameOver() == false)
+		if (Input.GetKeyDown(KeyCode.Escape) && gameAlive.IsGameOver() == false && settingsPanel.active == false)
         {
             toggleMenu();
         }
