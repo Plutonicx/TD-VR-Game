@@ -32,4 +32,9 @@ public class ResourceManage : MonoBehaviour {
 
         healthSlider.value = health;
     }
+
+    public int GetHealth()
+    {
+        return health;
+    }
 }
