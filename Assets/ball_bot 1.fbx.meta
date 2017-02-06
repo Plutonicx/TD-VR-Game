@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: c4541ff4834400a4a82a88d1f15d5276
-timeCreated: 1486369814
+guid: 38199bdf73a0cae4d9ca964e4b89669e
+timeCreated: 1486380670
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: ball_bot
+    100000: ball_bot
+    100002: //RootNode
     100004: ball_bot_head
     100006: Circle
-    400000: //RootNode
-    400002: ball_bot
+    400000: ball_bot
+    400002: //RootNode
     400004: ball_bot_head
     400006: Circle
     2300000: ball_bot
@@ -22,7 +22,20 @@ ModelImporter:
     4300000: Circle
     4300002: ball_bot_head
     4300004: ball_bot
-    7400000: Default Take
+    7400000: CircleAction
+    7400002: ball_bot_KO
+    7400004: ball_bot_moving
+    7400006: ball_bot_KO_head
+    7400008: Circle|ball_bot_KO
+    7400010: Circle|ball_bot_KO_head
+    7400012: Circle|ball_bot_moving
+    7400014: Circle|ball_moving
+    7400016: Circle|CircleAction
+    7400018: ball_bot|ball_bot_KO
+    7400020: ball_bot|ball_bot_KO_head
+    7400022: ball_bot|ball_bot_moving
+    7400024: ball_bot|ball_moving
+    7400026: ball_bot|CircleAction
     9500000: //RootNode
   materials:
     importMaterials: 1
