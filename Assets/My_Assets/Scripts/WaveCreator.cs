@@ -47,9 +47,14 @@ public class WaveCreator : MonoBehaviour {
             }
             catch (Exception e) { }
         }
-        else if (timer >= 2)
+        else if (timer >= 2 && counter < waves.Length)
         {
             waveText.color = Color.Lerp(waveText.color, Color.clear, flashSpeed * Time.deltaTime);
+        }
+        else if(counter >= waves.Length)
+        {
+            waveText.color = flashColour;
+            waveText.text = "Game Over. You win!";
         }
 
         if (spawnTrigger && timer >= spawnDelay)
