@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WaveCreator : MonoBehaviour {
 
@@ -9,6 +10,9 @@ public class WaveCreator : MonoBehaviour {
 
     public EnemySpawnerScript[] waves;
     EnemySpawnerScript currentWave;
+    public Text waveText;
+    public Color flashColour = new Color(1f, 1f, 1f, 0.5f);
+    public float flashSpeed = 0.05f;
 
     int counter;
     float timer;
@@ -39,8 +43,13 @@ public class WaveCreator : MonoBehaviour {
             {
                 currentWave = waves[counter];
                 ResetTimer();
+                ShowWaveNumber();
             }
             catch (Exception e) { }
+        }
+        else if (timer >= 2)
+        {
+            waveText.color = Color.Lerp(waveText.color, Color.clear, flashSpeed * Time.deltaTime);
         }
 
         if (spawnTrigger && timer >= spawnDelay)
@@ -53,6 +62,12 @@ public class WaveCreator : MonoBehaviour {
             catch (Exception e) { }
         }
 	}
+
+    private void ShowWaveNumber()
+    {
+        waveText.color = flashColour;
+        waveText.text = "Wave " + (counter + 1).ToString();
+    }
 
     private void ResetTimer()
     {
