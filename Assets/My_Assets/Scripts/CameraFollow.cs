@@ -18,9 +18,7 @@ public class CameraFollow : MonoBehaviour {
 	void Update () {
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
-        Debug.Log("position, x: " + targetCamPos.x.ToString() + " y: " + targetCamPos.y.ToString());
-
-        
+        Debug.Log("camera position, x: " + targetCamPos.x.ToString() + " y: " + targetCamPos.y.ToString() + " z: " + targetCamPos.z.ToString());
 
         targetCamPos.Set(-1*h, 0f, -1*v);
 
