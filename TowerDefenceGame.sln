@@ -1,9 +1,10 @@
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-
-Project("{E43EFEB5-4586-AE5C-C1FC-BF55B748AC37}") = "TowerDefenceGame", "Assembly-CSharp.csproj", "{42FCA8CD-5562-FA76-04F9-896EA5873D85}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{42FCA8CD-5562-FA76-04F9-896EA5873D85}"
 EndProject
-Project("{E43EFEB5-4586-AE5C-C1FC-BF55B748AC37}") = "TowerDefenceGame", "Assembly-CSharp-Editor.csproj", "{7D2C7E2B-0C91-81AE-4592-CA36CB863AE2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{7D2C7E2B-0C91-81AE-4592-CA36CB863AE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
