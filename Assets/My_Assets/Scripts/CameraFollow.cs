@@ -6,6 +6,7 @@ public class CameraFollow : MonoBehaviour {
 
     // Use this for initialization
     Vector3 targetCamPos;
+    Vector3 outOfBoundsVector;
 
     public float smoothing = 5f;
 
@@ -24,12 +25,22 @@ public class CameraFollow : MonoBehaviour {
 
         targetCamPos = targetCamPos.normalized;
 
-        if (transform.position.x <= 5 || transform.position.x >= 50 || transform.position.z <= 5 || transform.position.z >= 50)
+        outOfBoundsVector.Set(0, 0, 0);
+
+        if (transform.position.x <= 8 || transform.position.x >= 35 || transform.position.z <= 5 || transform.position.z >= 48)
         {
             // do something.
-        }
-        else
-        {
+            if (transform.position.x <= 8)
+                outOfBoundsVector = outOfBoundsVector + new Vector3(1, 0, 0);
+            if (transform.position.x >= 35)
+                outOfBoundsVector = outOfBoundsVector + new Vector3(-1, 0, 0);
+            if (transform.position.z <= 5)
+                outOfBoundsVector = outOfBoundsVector + new Vector3(0, 0, 1);
+            if (transform.position.z >= 48)
+                outOfBoundsVector = outOfBoundsVector + new Vector3(0, 0, -1);
+
+            if (outOfBoundsVector.x * targetCamPos.x + outOfBoundsVector.y * targetCamPos.y + outOfBoundsVector.z * targetCamPos.z < 0)
+                targetCamPos.Set(0, 0, 0);
 
         }
 
