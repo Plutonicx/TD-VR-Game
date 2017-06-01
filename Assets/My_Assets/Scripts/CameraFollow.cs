@@ -9,7 +9,7 @@ public class CameraFollow : MonoBehaviour {
     Vector3 outOfBoundsVector;
 
     public float smoothing = 5f;
-
+    public float cameraSpeed = 2f;
 
     void Awake () {
 
@@ -43,6 +43,8 @@ public class CameraFollow : MonoBehaviour {
                 targetCamPos.Set(0, 0, 0);
 
         }
+
+        targetCamPos *= cameraSpeed;
 
         transform.position = Vector3.Lerp(transform.position, transform.position + targetCamPos, smoothing * Time.deltaTime);
     }
