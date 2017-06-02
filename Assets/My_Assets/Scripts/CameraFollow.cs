@@ -19,6 +19,9 @@ public class CameraFollow : MonoBehaviour {
 	void Update () {
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
+
+        // get input for mouse drags.
+
         Debug.Log("camera position, x: " + transform.position.x.ToString() + " y: " + transform.position.y.ToString() + " z: " + transform.position.z.ToString());
 
         targetCamPos.Set(-1*h, 0f, -1*v);
@@ -38,6 +41,8 @@ public class CameraFollow : MonoBehaviour {
                 outOfBoundsVector = outOfBoundsVector + new Vector3(0, 0, 1);
             if (transform.position.z >= 48)
                 outOfBoundsVector = outOfBoundsVector + new Vector3(0, 0, -1);
+
+
 
             if (outOfBoundsVector.x * targetCamPos.x + outOfBoundsVector.y * targetCamPos.y + outOfBoundsVector.z * targetCamPos.z < 0)
                 targetCamPos.Set(0, 0, 0);
